@@ -14,7 +14,7 @@ Script uses the following tools:
 - dirsearch
 - feroxbuster
 - gobuster
-- Fast website fuzzer (ffuf)
+- Fast web fuzzer (ffuf)
 
 ## Arguments
 The script takes to arguments - domain or IP address, and wordlist.
