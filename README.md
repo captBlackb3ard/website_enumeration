@@ -1,10 +1,26 @@
                                                                                                                                         
-# Basic Website Enumeration Script
-   ___      _               __             ___  ____        _       ___ _            _    
-  / __\   _| |__   ___ _ __/ _\ ___  ___  / __\/ __ \ _ __ | |_    / __\ | __ _  ___| | __
- / / | | | | '_ \ / _ \ '__\ \ / _ \/ __|/ /  / / _` | '_ \| __|  /__\// |/ _` |/ __| |/ /
-/ /__| |_| | |_) |  __/ |  _\ \  __/ (__/ /__| | (_| | |_) | |_ _/ \/  \ | (_| | (__|   < 
-\____/\__, |_.__/ \___|_|  \__/\___|\___\____/\ \__,_| .__/ \__(_)_____/_|\__,_|\___|_|\_\
-      |___/                                    \____/|_|                                  
-      
+# Basic Bash Website Enumeration Script
+```
 
+ ██████ ██    ██ ██████  ███████ ██████  ███████ ███████  ██████  ██████  ██████  ██████  ████████    ██████  ██       █████   ██████ ██   ██ 
+██       ██  ██  ██   ██ ██      ██   ██ ██      ██      ██      ██      ██    ██ ██   ██    ██       ██   ██ ██      ██   ██ ██      ██  ██  
+██        ████   ██████  █████   ██████  ███████ █████   ██      ██      ██ ██ ██ ██████     ██       ██████  ██      ███████ ██      █████   
+██         ██    ██   ██ ██      ██   ██      ██ ██      ██      ██      ██ ██ ██ ██         ██       ██   ██ ██      ██   ██ ██      ██  ██  
+ ██████    ██    ██████  ███████ ██   ██ ███████ ███████  ██████  ██████  █ ████  ██         ██    ██ ██████  ███████ ██   ██  ██████ ██   ██ 
+                                                                                                                                                                                                                                                                                      
+```
+## Tools
+Script uses the following tools:
+- dirsearch
+- feroxbuster
+- gobuster
+- Fast website fuzzer (ffuf)
+
+# Arguments
+The script takes to arguments - domain or IP address, and wordlist.
+Users can amend the script to specify the file extensions to be enumerated within the script.
+
+
+# Results
+The script will attempt to create directory named after the domain/IP address, and store the results under a sub-directory named 'recon'.
+The results of each tool are stored in a separate file.
