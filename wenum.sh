@@ -9,7 +9,7 @@
  ██████    ██    ██████  ███████ ██   ██ ███████ ███████  ██████  ██████  █ ████  ██         ██    ██ ██████  ███████ ██   ██  ██████ ██   ██ 
 
 **********************************************************************************************************************************************
-				                          WEBSITE DIRSEARCH/FEREOXBUSTER/GOBUSTER/FFUF ENUMERATION SCRIPT
+			            WEBSITE DIRSEARCH/FEREOXBUSTER/GOBUSTER/FFUF ENUMERATION SCRIPT
 **********************************************************************************************************************************************
 "
 #https://hacklido.com/blog/452-directory-bruteforcing-on-web-server-automation-with-bash-scripting
