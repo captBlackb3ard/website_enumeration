@@ -29,4 +29,4 @@ The results of each tool are stored in a separate file.
 **NOTE**: Ensure all the above tools are installed and up to date.
 Execute the following commands: 
 - chmod +x wenum.sh
-- ./wenum.sh <domain_or_ip_add> <wordlist>
+- ./wenum.sh $domain_or_ip_add $wordlist
