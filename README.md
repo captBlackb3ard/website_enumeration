@@ -28,5 +28,5 @@ The results of each tool are stored in a separate file.
 ## Usage
 **NOTE**: Ensure all the above tools are installed and up to date.
 Execute the following commands: 
-- chmod +x wed_dir_enum.sh
+- chmod +x web_dir_enum.sh
 - ./web_dir_enum.sh $domain_or_ip_add $wordlist
