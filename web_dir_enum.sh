@@ -51,13 +51,13 @@ fi
 
 #Check if dirsearch is installed
 if [ ! -x "$(command -v dirsearch)" ]; then
-   echo "[-] ffuf required to run script"
+   echo "[-] dirsearch required to run script"
    exit 1
 fi
 
 #Check if Gobuster is installed
 if [ ! -x "$(command -v gobuster)" ]; then
-   echo "[-] ffuf required to run script"
+   echo "[-] gobuster required to run script"
    exit 1
 fi
 
@@ -66,11 +66,11 @@ if [ ! -x "$(command -v ffuf)" ]; then
    echo "[-] ffuf required to run script"
    exit 1
 fi
+
 #Check if Feroxbuster is installed
 #GitHub Repo: https://github.com/epi052/feroxbuster
-
 if [ ! -x "$(command -v feroxbuster)" ]; then
-   echo "[-] ffuf required to run script"
+   echo "[-] feroxbuster required to run script"
    exit 1
 fi
 
@@ -85,7 +85,6 @@ fi
 
 #Create files to store results
 if [ ! -f "$url/recon/ffuf_enumeration.txt" ];then
-	
 	touch $url/recon/ffuf_enumeration.txt
 	touch $url/recon/dirsearch_enumeration.txt
 	touch $url/recon/gobuster_enumeration.txt
@@ -98,10 +97,10 @@ fi
 echo "[+] Enumerating website with Dirsearch...."
 
 if ! dirsearch -e $dirsearch_ext -w $wordlist -u "$target" -o $url/recon/dirsearch_enumeration.txt; then
-	echo "An error occurred while running ffuf."
+	echo "An error occurred while running dirsearch."
 	exit 1
 else
-	echo "dirsearch completed successfully. Results stored in $url/recon/dirsearch_enumeration.txt."
+	echo "dirsearch completed successfully. Results are stored in $url/recon/dirsearch_enumeration.txt."
 fi
 
 
@@ -112,7 +111,7 @@ if ! feroxbuster -x $web_ext --wordlist $wordlist --url "$target" -o $url/recon/
 	echo "An error occurred while running Feroxbuster."
 	exit 1
 else
-	echo "Feroxbuster completed successfully. Results stored in $url/recon/feroxbuster_enumeration.txt."
+	echo "Feroxbuster completed successfully. Results are stored in $url/recon/feroxbuster_enumeration.txt."
 fi
 
 #Gobuster Enumeration
@@ -122,7 +121,7 @@ if ! gobuster dir -x $web_ext -w $wordlist --url "$target" -o $url/recon/gobuste
 	echo "An error occurred while running Gobuster."
 	exit 1
 else
-	echo "Gobuster completed successfully. Results stored in $url/recon/gobuster_enumeration.txt."
+	echo "Gobuster completed successfully. Results are stored in $url/recon/gobuster_enumeration.txt."
 fi
 
 #Ffuf Enumeration
@@ -132,5 +131,5 @@ if ! ffuf -e $web_ext -w $wordlist -u "$target/FUZZ" >> $url/recon/ffuf_enumerat
 	echo "An error occurred while running ffuf."
 	exit 1
 else
-	echo "ffuf completed successfully. Results stored in $url/recon/ffuf_enumeration.txt."
+	echo "ffuf completed successfully. Results are stored in $url/recon/ffuf_enumeration.txt."
 fi
